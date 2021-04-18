@@ -1,0 +1,57 @@
+{
+  "MainPage": [
+    {
+      "MenuTab": [
+        {
+          "Neu": "",
+          "Collection": "",
+          "Looks": "",
+          "Mobel": "//*[@id=\"wwOneHeader\"]/div/div[2]/nav/ul/li[4]/a/span[2]",
+          "Deko": "",
+          "Leuchten": "",
+          "Textilien": "",
+          "Tisch & Bar": "",
+          "Kinderzimmer": "",
+          "Garten": "",
+          "Gutscheine": "",
+          "Beratung": ""
+        },
+        {
+          "acceptCookie": "//*[@id=\"onetrust-accept-btn-handler\"]"
+        }
+      ]
+    },
+    {
+      "MobelPage": [
+        {
+          "firstProductHeart": "//*[@id=\"app-root\"]/div/div[1]/div[7]/div/div/main/div/div[2]/div[1]/a/div/div[2]/div[2]"
+        }
+      ]
+    },
+    {
+      "LoginPage": [
+        {
+          "username": "//input[@type='email']",
+          "password": "//input[@type='password']",
+          "recieveMailBox": "//input[@type='checkbox']",
+          "RegisterButton": "//button[@type='submit']"
+        }
+      ]
+    },
+    {
+      "WishlistIcon": "//*[@id=\"wwOneHeader\"]/div/div[1]/header/div[8]/div[3]/div/span[2]",
+      "WishlistCount": "//*[@id=\"wwOneHeader\"]/div/div[1]/header/div[8]/div[3]/div/span[1]/span"
+    }
+  ],
+  "WishlistPage": [
+    {
+      "Product": [
+        {
+          "ProductName": "",
+          "ProductPicture": "",
+          "RemoveProduct": "//*[@id=\"wishlistRoot\"]/div/div[4]/div/ul/li/button"
+        }
+      ]
+    }
+  ]
+}
