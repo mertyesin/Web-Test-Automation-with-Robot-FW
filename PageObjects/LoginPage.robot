@@ -7,6 +7,12 @@ Resource  ../library/CommonKeywords.robot
 *** Variables ***
 
 *** Keywords ***
+Login
+    [Documentation]
+    [Arguments]  ${email}  ${password}
+    Accept Cookies
+    Input Username and Password  ${email}  ${password}
+
 Input Username and Password
     [Arguments]   ${email}  ${password}
     # Get email textbox

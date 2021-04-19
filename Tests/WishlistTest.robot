@@ -3,7 +3,6 @@ Library  SeleniumLibrary
 Library  Screenshot
 Documentation     Westwing website wishlist test
 
-Resource  ../PageObjects/HomePage.robot
 Resource  ../PageObjects/PageObjects.robot
 Resource  ../library/CommonKeywords.robot
 
@@ -19,10 +18,10 @@ Add and remove an item to wishlist
 
     Add first listed product in Mobel Section to the Wishlist
     Check wishlist product count is  1
-    Take screenshot  1_item_in_wishlist_icon
+    Take screenshot  1_item_in_wishlist_icon_and_in_the_list
 
     Remove the product from wishlist
-    # Check wishlist product count is  0
+    Take screenshot  no_item_in_wishlist_icon_and_in_the_list
 
 *** Keywords ***
 Check wishlist product count is
