@@ -8,7 +8,7 @@ Resource  ../library/CommonKeywords.robot
 
 *** Keywords ***
 Go to Mobel Menu from Home Page
-    [Documentation]  TBD
+    [Documentation]  Navigate to Möbel Menu
     # get test data and credentials
     ${mobel_xpath}  ${SearchBox}  Get xpaths from the JSON file for Home Page
     sleep  3
@@ -17,7 +17,7 @@ Go to Mobel Menu from Home Page
     Maximize Browser Window
 
 Go to Wishlist from Home Page
-    [Documentation]  TBD
+    [Documentation]  Navigate to Wishlist
     # get test data and credentials
     ${wishlist_icon}  Get xpaths from the JSON file for Wishlist Icon
     Wait Until Element Is Visible  ${wishlist_icon}
