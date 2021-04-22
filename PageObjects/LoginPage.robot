@@ -9,17 +9,17 @@ Resource  ../library/CommonKeywords.robot
 *** Keywords ***
 Login
     [Documentation]
-    [Arguments]  ${email}  ${password}
-    Accept Cookies
+    ${email}  ${password}  Get user credentials
     Input Username and Password  ${email}  ${password}
 
 Input Username and Password
     [Arguments]   ${email}  ${password}
     # Get email textbox
-    ${username_locator}  ${password_locator}  ${recieveMailBox}  ${RegisterButton}  Get xpaths of login window from the JSON file for Home Page
+    ${username_locator}  ${password_locator}  ${recieveMailBox}  ${terms&conditions}  ${RegisterButton}  Get xpaths of login window from the JSON file for Home Page
 
     Input text   ${username_locator}  ${email}
     Input text   ${password_locator}  ${password}
+    Accept Terms & Conditions  ${terms&conditions}
     Accept mail registration  ${recieveMailBox}
     Click element  ${RegisterButton}
 
@@ -30,3 +30,7 @@ Accept Cookies
 Accept mail registration
     [Arguments]   ${recieveMailBox}
     Click element  ${recieveMailBox}
+
+Accept Terms & Conditions
+    [Arguments]   ${terms&conditions}
+    Click element  ${terms&conditions}

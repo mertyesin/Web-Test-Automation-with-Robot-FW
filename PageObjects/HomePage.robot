@@ -7,11 +7,17 @@ Resource  ../library/CommonKeywords.robot
 *** Variables ***
 
 *** Keywords ***
+Go to My Account
+    ${mobel_xpath}  ${SearchBox}  ${myAccount}  Get xpaths from the JSON file for Home Page
+    Accept Cookies
+    sleep  3
+    Click element  ${myAccount}
+
 Go to Mobel Menu from Home Page
     [Documentation]  Navigate to Möbel Menu
     # get test data and credentials
-    ${mobel_xpath}  ${SearchBox}  Get xpaths from the JSON file for Home Page
-    sleep  3
+    ${mobel_xpath}  ${SearchBox}  ${myAccount}  Get xpaths from the JSON file for Home Page
+    sleep  5
     Click Element  ${mobel_xpath}
     Click Element  ${SearchBox}  # This may seem unnecessary, but the window which is opening when hovering over the möbel, can block further actions that follow. Elements may not be found.
     Maximize Browser Window

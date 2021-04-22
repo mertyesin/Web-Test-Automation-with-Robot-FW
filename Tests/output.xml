@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0.1 (Python 3.8.8 on win32)" generated="20210420 12:20:39.423" rpa="false" schemaversion="2">
+<robot generator="Robot 4.0.1 (Python 3.8.8 on win32)" generated="20210422 12:33:15.931" rpa="false" schemaversion="2">
 <suite id="s1" name="WishlistTest" source="C:\Users\mert.yesin\PycharmProjects\westwing\Tests\WishlistTest.robot">
 <test id="s1-t1" name="Add and remove an item to wishlist">
 <kw name="Start Test Case" library="CommonKeywords" type="SETUP">
@@ -15,108 +15,118 @@
 <var>${json}</var>
 <arg>../data/test_data.json</arg>
 <doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20210420 12:20:39.754" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\mert.yesin\PycharmProjects\westwing\data\test_data.json"&gt;C:\Users\mert.yesin\PycharmProjects\westwing\data\test_data.json&lt;/a&gt;'.</msg>
-<msg timestamp="20210420 12:20:39.754" level="INFO">${json} = {
+<msg timestamp="20210422 12:33:16.248" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\mert.yesin\PycharmProjects\westwing\data\test_data.json"&gt;C:\Users\mert.yesin\PycharmProjects\westwing\data\test_data.json&lt;/a&gt;'.</msg>
+<msg timestamp="20210422 12:33:16.248" level="INFO">${json} = {
   "url": "http://www.westwingnow.de",
   "browserType": "chrome"
 }</msg>
-<status status="PASS" starttime="20210420 12:20:39.754" endtime="20210420 12:20:39.754"/>
+<status status="PASS" starttime="20210422 12:33:16.247" endtime="20210422 12:33:16.248"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${object}</var>
 <arg>json.loads(r'''${json}''')</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20210420 12:20:39.754" level="INFO">${object} = {'url': 'http://www.westwingnow.de', 'browserType': 'chrome'}</msg>
-<status status="PASS" starttime="20210420 12:20:39.754" endtime="20210420 12:20:39.754"/>
+<msg timestamp="20210422 12:33:16.248" level="INFO">${object} = {'url': 'http://www.westwingnow.de', 'browserType': 'chrome'}</msg>
+<status status="PASS" starttime="20210422 12:33:16.248" endtime="20210422 12:33:16.248"/>
 </kw>
-<msg timestamp="20210420 12:20:39.754" level="INFO">${object} = {'url': 'http://www.westwingnow.de', 'browserType': 'chrome'}</msg>
-<status status="PASS" starttime="20210420 12:20:39.754" endtime="20210420 12:20:39.754"/>
+<msg timestamp="20210422 12:33:16.248" level="INFO">${object} = {'url': 'http://www.westwingnow.de', 'browserType': 'chrome'}</msg>
+<status status="PASS" starttime="20210422 12:33:16.247" endtime="20210422 12:33:16.248"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${url}</var>
 <arg>${object["url"]}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20210420 12:20:39.754" level="INFO">${url} = http://www.westwingnow.de</msg>
-<status status="PASS" starttime="20210420 12:20:39.754" endtime="20210420 12:20:39.754"/>
+<msg timestamp="20210422 12:33:16.249" level="INFO">${url} = http://www.westwingnow.de</msg>
+<status status="PASS" starttime="20210422 12:33:16.248" endtime="20210422 12:33:16.249"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${browser_type}</var>
 <arg>${object["browserType"]}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20210420 12:20:39.763" level="INFO">${browser_type} = chrome</msg>
-<status status="PASS" starttime="20210420 12:20:39.754" endtime="20210420 12:20:39.763"/>
+<msg timestamp="20210422 12:33:16.250" level="INFO">${browser_type} = chrome</msg>
+<status status="PASS" starttime="20210422 12:33:16.249" endtime="20210422 12:33:16.250"/>
 </kw>
-<msg timestamp="20210420 12:20:39.763" level="INFO">${url} = http://www.westwingnow.de</msg>
-<msg timestamp="20210420 12:20:39.763" level="INFO">${browser_type} = chrome</msg>
-<status status="PASS" starttime="20210420 12:20:39.754" endtime="20210420 12:20:39.763"/>
-</kw>
-<kw name="Get user credentials" library="CommonKeywords">
-<var>${email}</var>
-<var>${password}</var>
-<doc>Return email and password locators</doc>
-<kw name="Read user credentials' locators" library="CommonKeywords">
-<var>${object}</var>
-<doc>Get username and password xpaths</doc>
-<kw name="Get File" library="OperatingSystem">
-<var>${json}</var>
-<arg>../data/user_credentials.json</arg>
-<doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20210420 12:20:39.763" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\mert.yesin\PycharmProjects\westwing\data\user_credentials.json"&gt;C:\Users\mert.yesin\PycharmProjects\westwing\data\user_credentials.json&lt;/a&gt;'.</msg>
-<msg timestamp="20210420 12:20:39.763" level="INFO">${json} = {
-  "registerInfo": [
-    {
-      "first_name": "Mustafa Mert",
-      "last_name": "Yesin",
-      "phone": "+905315993639",
-      "email": "mertyesin89@gmail.com",
-      "password": "14101969944"
-    ...</msg>
-<status status="PASS" starttime="20210420 12:20:39.763" endtime="20210420 12:20:39.763"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${object}</var>
-<arg>json.loads(r'''${json}''')</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20210420 12:20:39.763" level="INFO">${object} = {'registerInfo': [{'first_name': 'Mustafa Mert', 'last_name': 'Yesin', 'phone': '+905315993639', 'email': 'mertyesin89@gmail.com', 'password': '14101969944'}]}</msg>
-<status status="PASS" starttime="20210420 12:20:39.763" endtime="20210420 12:20:39.763"/>
-</kw>
-<msg timestamp="20210420 12:20:39.763" level="INFO">${object} = {'registerInfo': [{'first_name': 'Mustafa Mert', 'last_name': 'Yesin', 'phone': '+905315993639', 'email': 'mertyesin89@gmail.com', 'password': '14101969944'}]}</msg>
-<status status="PASS" starttime="20210420 12:20:39.763" endtime="20210420 12:20:39.763"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${email}</var>
-<arg>${object["registerInfo"][0]["email"]}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20210420 12:20:39.763" level="INFO">${email} = mertyesin89@gmail.com</msg>
-<status status="PASS" starttime="20210420 12:20:39.763" endtime="20210420 12:20:39.763"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${password}</var>
-<arg>${object["registerInfo"][0]["password"]}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20210420 12:20:39.763" level="INFO">${password} = 14101969944</msg>
-<status status="PASS" starttime="20210420 12:20:39.763" endtime="20210420 12:20:39.763"/>
-</kw>
-<msg timestamp="20210420 12:20:39.763" level="INFO">${email} = mertyesin89@gmail.com</msg>
-<msg timestamp="20210420 12:20:39.763" level="INFO">${password} = 14101969944</msg>
-<status status="PASS" starttime="20210420 12:20:39.763" endtime="20210420 12:20:39.763"/>
+<msg timestamp="20210422 12:33:16.250" level="INFO">${url} = http://www.westwingnow.de</msg>
+<msg timestamp="20210422 12:33:16.250" level="INFO">${browser_type} = chrome</msg>
+<status status="PASS" starttime="20210422 12:33:16.247" endtime="20210422 12:33:16.250"/>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser_type}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210420 12:20:39.763" level="INFO">Opening browser 'chrome' to base url 'http://www.westwingnow.de'.</msg>
-<status status="PASS" starttime="20210420 12:20:39.763" endtime="20210420 12:20:43.234"/>
+<msg timestamp="20210422 12:33:16.250" level="INFO">Opening browser 'chrome' to base url 'http://www.westwingnow.de'.</msg>
+<status status="PASS" starttime="20210422 12:33:16.250" endtime="20210422 12:33:20.005"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210420 12:20:48.253" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20210420 12:20:43.235" endtime="20210420 12:20:48.253"/>
+<msg timestamp="20210422 12:33:25.023" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210422 12:33:20.005" endtime="20210422 12:33:25.023"/>
 </kw>
-<kw name="Login" library="LoginPage">
-<arg>${email}</arg>
-<arg>${password}</arg>
+<status status="PASS" starttime="20210422 12:33:16.247" endtime="20210422 12:33:25.023"/>
+</kw>
+<kw name="Login to website" library="PageObjects">
+<kw name="Go to My Account" library="HomePage">
+<kw name="Get xpaths from the JSON file for Home Page" library="CommonKeywords">
+<var>${mobel_xpath}</var>
+<var>${SearchBox}</var>
+<var>${myAccount}</var>
+<doc>Return Home Page locators</doc>
+<kw name="Read object repository locators" library="CommonKeywords">
+<var>${object}</var>
+<doc>For all elements on website, this keyword is returns an xpath collection for other keywords</doc>
+<kw name="Get File" library="OperatingSystem">
+<var>${json}</var>
+<arg>../library/ObjectRepository.json</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20210422 12:33:25.023" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json"&gt;C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json&lt;/a&gt;'.</msg>
+<msg timestamp="20210422 12:33:25.023" level="INFO">${json} = {
+   "MainPage":[
+      {
+         "MenuTab":[
+            {
+               "Neu":"",
+               "Collection":"",
+               "Looks":"",
+               "Mobel":"//*[@id=\"wwOneHeader\"]/div/di...</msg>
+<status status="PASS" starttime="20210422 12:33:25.023" endtime="20210422 12:33:25.023"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${object}</var>
+<arg>json.loads(r'''${json}''')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20210422 12:33:25.023" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
+<status status="PASS" starttime="20210422 12:33:25.023" endtime="20210422 12:33:25.023"/>
+</kw>
+<msg timestamp="20210422 12:33:25.023" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
+<status status="PASS" starttime="20210422 12:33:25.023" endtime="20210422 12:33:25.023"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${mobel_xpath}</var>
+<arg>${object["MainPage"][0]["MenuTab"][0]["Mobel"]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210422 12:33:25.023" level="INFO">${mobel_xpath} = //*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]</msg>
+<status status="PASS" starttime="20210422 12:33:25.023" endtime="20210422 12:33:25.023"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${SearchBox}</var>
+<arg>${object["MainPage"][0]["MenuTab"][1]["searchBox"]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210422 12:33:25.023" level="INFO">${SearchBox} = //*[@id="wwOneHeader"]/div/div[1]/header/div[6]/div[1]/form/input</msg>
+<status status="PASS" starttime="20210422 12:33:25.023" endtime="20210422 12:33:25.023"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${myAccount}</var>
+<arg>${object["myAccount"]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210422 12:33:25.023" level="INFO">${myAccount} = //*[@id="wwOneHeader"]/div/div[1]/header/div[8]/div[1]/div/span[2]</msg>
+<status status="PASS" starttime="20210422 12:33:25.023" endtime="20210422 12:33:25.023"/>
+</kw>
+<msg timestamp="20210422 12:33:25.023" level="INFO">${mobel_xpath} = //*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]</msg>
+<msg timestamp="20210422 12:33:25.023" level="INFO">${SearchBox} = //*[@id="wwOneHeader"]/div/div[1]/header/div[6]/div[1]/form/input</msg>
+<msg timestamp="20210422 12:33:25.023" level="INFO">${myAccount} = //*[@id="wwOneHeader"]/div/div[1]/header/div[8]/div[1]/div/span[2]</msg>
+<status status="PASS" starttime="20210422 12:33:25.023" endtime="20210422 12:33:25.023"/>
+</kw>
 <kw name="Accept Cookies" library="LoginPage">
 <kw name="Get cookie button" library="CommonKeywords">
 <var>${Cookie_button}</var>
@@ -128,8 +138,8 @@
 <var>${json}</var>
 <arg>../library/ObjectRepository.json</arg>
 <doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20210420 12:20:48.253" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json"&gt;C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json&lt;/a&gt;'.</msg>
-<msg timestamp="20210420 12:20:48.253" level="INFO">${json} = {
+<msg timestamp="20210422 12:33:25.023" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json"&gt;C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json&lt;/a&gt;'.</msg>
+<msg timestamp="20210422 12:33:25.023" level="INFO">${json} = {
    "MainPage":[
       {
          "MenuTab":[
@@ -138,35 +148,101 @@
                "Collection":"",
                "Looks":"",
                "Mobel":"//*[@id=\"wwOneHeader\"]/div/di...</msg>
-<status status="PASS" starttime="20210420 12:20:48.253" endtime="20210420 12:20:48.253"/>
+<status status="PASS" starttime="20210422 12:33:25.023" endtime="20210422 12:33:25.023"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${object}</var>
 <arg>json.loads(r'''${json}''')</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20210420 12:20:48.253" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
-<status status="PASS" starttime="20210420 12:20:48.253" endtime="20210420 12:20:48.253"/>
+<msg timestamp="20210422 12:33:25.023" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
+<status status="PASS" starttime="20210422 12:33:25.023" endtime="20210422 12:33:25.023"/>
 </kw>
-<msg timestamp="20210420 12:20:48.253" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
-<status status="PASS" starttime="20210420 12:20:48.253" endtime="20210420 12:20:48.253"/>
+<msg timestamp="20210422 12:33:25.023" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
+<status status="PASS" starttime="20210422 12:33:25.023" endtime="20210422 12:33:25.023"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${Cookie_button}</var>
 <arg>${object["MainPage"][0]["MenuTab"][1]["acceptCookie"]}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20210420 12:20:48.253" level="INFO">${Cookie_button} = //*[@id="onetrust-accept-btn-handler"]</msg>
-<status status="PASS" starttime="20210420 12:20:48.253" endtime="20210420 12:20:48.253"/>
+<msg timestamp="20210422 12:33:25.031" level="INFO">${Cookie_button} = //*[@id="onetrust-accept-btn-handler"]</msg>
+<status status="PASS" starttime="20210422 12:33:25.023" endtime="20210422 12:33:25.031"/>
 </kw>
-<msg timestamp="20210420 12:20:48.253" level="INFO">${Cookie_button} = //*[@id="onetrust-accept-btn-handler"]</msg>
-<status status="PASS" starttime="20210420 12:20:48.253" endtime="20210420 12:20:48.253"/>
+<msg timestamp="20210422 12:33:25.031" level="INFO">${Cookie_button} = //*[@id="onetrust-accept-btn-handler"]</msg>
+<status status="PASS" starttime="20210422 12:33:25.023" endtime="20210422 12:33:25.031"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Cookie_button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210420 12:20:48.253" level="INFO">Clicking element '//*[@id="onetrust-accept-btn-handler"]'.</msg>
-<status status="PASS" starttime="20210420 12:20:48.253" endtime="20210420 12:20:48.316"/>
+<msg timestamp="20210422 12:33:25.031" level="INFO">Clicking element '//*[@id="onetrust-accept-btn-handler"]'.</msg>
+<status status="PASS" starttime="20210422 12:33:25.031" endtime="20210422 12:33:25.086"/>
 </kw>
-<status status="PASS" starttime="20210420 12:20:48.253" endtime="20210420 12:20:48.316"/>
+<status status="PASS" starttime="20210422 12:33:25.023" endtime="20210422 12:33:25.087"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210422 12:33:28.088" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210422 12:33:25.087" endtime="20210422 12:33:28.088"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${myAccount}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210422 12:33:28.088" level="INFO">Clicking element '//*[@id="wwOneHeader"]/div/div[1]/header/div[8]/div[1]/div/span[2]'.</msg>
+<status status="PASS" starttime="20210422 12:33:28.088" endtime="20210422 12:33:28.182"/>
+</kw>
+<status status="PASS" starttime="20210422 12:33:25.023" endtime="20210422 12:33:28.182"/>
+</kw>
+<kw name="Login" library="LoginPage">
+<kw name="Get user credentials" library="CommonKeywords">
+<var>${email}</var>
+<var>${password}</var>
+<doc>Return email and password locators</doc>
+<kw name="Read user credentials' locators" library="CommonKeywords">
+<var>${object}</var>
+<doc>Get username and password xpaths</doc>
+<kw name="Get File" library="OperatingSystem">
+<var>${json}</var>
+<arg>../data/user_credentials.json</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20210422 12:33:28.184" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\mert.yesin\PycharmProjects\westwing\data\user_credentials.json"&gt;C:\Users\mert.yesin\PycharmProjects\westwing\data\user_credentials.json&lt;/a&gt;'.</msg>
+<msg timestamp="20210422 12:33:28.184" level="INFO">${json} = {
+  "registerInfo": [
+    {
+      "first_name": "Mustafa Mert",
+      "last_name": "Yesin",
+      "phone": "+905315993639",
+      "email": "mertyesin89@gmail.com",
+      "password": "14101969944"
+    ...</msg>
+<status status="PASS" starttime="20210422 12:33:28.183" endtime="20210422 12:33:28.185"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${object}</var>
+<arg>json.loads(r'''${json}''')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20210422 12:33:28.185" level="INFO">${object} = {'registerInfo': [{'first_name': 'Mustafa Mert', 'last_name': 'Yesin', 'phone': '+905315993639', 'email': 'mertyesin89@gmail.com', 'password': '14101969944'}]}</msg>
+<status status="PASS" starttime="20210422 12:33:28.185" endtime="20210422 12:33:28.185"/>
+</kw>
+<msg timestamp="20210422 12:33:28.186" level="INFO">${object} = {'registerInfo': [{'first_name': 'Mustafa Mert', 'last_name': 'Yesin', 'phone': '+905315993639', 'email': 'mertyesin89@gmail.com', 'password': '14101969944'}]}</msg>
+<status status="PASS" starttime="20210422 12:33:28.183" endtime="20210422 12:33:28.186"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${email}</var>
+<arg>${object["registerInfo"][0]["email"]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210422 12:33:28.186" level="INFO">${email} = mertyesin89@gmail.com</msg>
+<status status="PASS" starttime="20210422 12:33:28.186" endtime="20210422 12:33:28.186"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${password}</var>
+<arg>${object["registerInfo"][0]["password"]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210422 12:33:28.187" level="INFO">${password} = 14101969944</msg>
+<status status="PASS" starttime="20210422 12:33:28.186" endtime="20210422 12:33:28.187"/>
+</kw>
+<msg timestamp="20210422 12:33:28.187" level="INFO">${email} = mertyesin89@gmail.com</msg>
+<msg timestamp="20210422 12:33:28.187" level="INFO">${password} = 14101969944</msg>
+<status status="PASS" starttime="20210422 12:33:28.183" endtime="20210422 12:33:28.187"/>
 </kw>
 <kw name="Input Username and Password" library="LoginPage">
 <arg>${email}</arg>
@@ -175,6 +251,7 @@
 <var>${username_locator}</var>
 <var>${password_locator}</var>
 <var>${recieveMailBox}</var>
+<var>${terms&amp;conditions}</var>
 <var>${RegisterButton}</var>
 <doc>TBD</doc>
 <kw name="Read object repository locators" library="CommonKeywords">
@@ -184,8 +261,8 @@
 <var>${json}</var>
 <arg>../library/ObjectRepository.json</arg>
 <doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20210420 12:20:48.317" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json"&gt;C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json&lt;/a&gt;'.</msg>
-<msg timestamp="20210420 12:20:48.318" level="INFO">${json} = {
+<msg timestamp="20210422 12:33:28.188" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json"&gt;C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json&lt;/a&gt;'.</msg>
+<msg timestamp="20210422 12:33:28.189" level="INFO">${json} = {
    "MainPage":[
       {
          "MenuTab":[
@@ -194,87 +271,105 @@
                "Collection":"",
                "Looks":"",
                "Mobel":"//*[@id=\"wwOneHeader\"]/div/di...</msg>
-<status status="PASS" starttime="20210420 12:20:48.317" endtime="20210420 12:20:48.318"/>
+<status status="PASS" starttime="20210422 12:33:28.188" endtime="20210422 12:33:28.189"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${object}</var>
 <arg>json.loads(r'''${json}''')</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20210420 12:20:48.318" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
-<status status="PASS" starttime="20210420 12:20:48.318" endtime="20210420 12:20:48.318"/>
+<msg timestamp="20210422 12:33:28.189" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
+<status status="PASS" starttime="20210422 12:33:28.189" endtime="20210422 12:33:28.189"/>
 </kw>
-<msg timestamp="20210420 12:20:48.318" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
-<status status="PASS" starttime="20210420 12:20:48.317" endtime="20210420 12:20:48.318"/>
+<msg timestamp="20210422 12:33:28.189" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
+<status status="PASS" starttime="20210422 12:33:28.188" endtime="20210422 12:33:28.189"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${username}</var>
 <arg>${object["MainPage"][2]["LoginPage"][0]["username"]}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20210420 12:20:48.320" level="INFO">${username} = //input[@type='email']</msg>
-<status status="PASS" starttime="20210420 12:20:48.319" endtime="20210420 12:20:48.320"/>
+<msg timestamp="20210422 12:33:28.190" level="INFO">${username} = //input[@type='email']</msg>
+<status status="PASS" starttime="20210422 12:33:28.190" endtime="20210422 12:33:28.190"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${password}</var>
 <arg>${object["MainPage"][2]["LoginPage"][0]["password"]}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20210420 12:20:48.322" level="INFO">${password} = //input[@type='password']</msg>
-<status status="PASS" starttime="20210420 12:20:48.320" endtime="20210420 12:20:48.322"/>
+<msg timestamp="20210422 12:33:28.191" level="INFO">${password} = //input[@type='password']</msg>
+<status status="PASS" starttime="20210422 12:33:28.190" endtime="20210422 12:33:28.191"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${recieveMailBox}</var>
 <arg>${object["MainPage"][2]["LoginPage"][0]["recieveMailBox"]}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20210420 12:20:48.322" level="INFO">${recieveMailBox} = //input[@type='checkbox']</msg>
-<status status="PASS" starttime="20210420 12:20:48.322" endtime="20210420 12:20:48.322"/>
+<msg timestamp="20210422 12:33:28.191" level="INFO">${recieveMailBox} = //input[@type='checkbox']</msg>
+<status status="PASS" starttime="20210422 12:33:28.191" endtime="20210422 12:33:28.191"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${terms&amp;conditions}</var>
+<arg>${object["MainPage"][2]["LoginPage"][0]["terms&amp;conditions"]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210422 12:33:28.192" level="INFO">${terms&amp;conditions} = (//input[@class='StyledCheckbox__StyledInput-sc-19upj2m-0 PuVIQ'])[2]</msg>
+<status status="PASS" starttime="20210422 12:33:28.191" endtime="20210422 12:33:28.192"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${RegisterButton}</var>
 <arg>${object["MainPage"][2]["LoginPage"][0]["RegisterButton"]}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20210420 12:20:48.323" level="INFO">${RegisterButton} = //button[@type='submit']</msg>
-<status status="PASS" starttime="20210420 12:20:48.323" endtime="20210420 12:20:48.323"/>
+<msg timestamp="20210422 12:33:28.192" level="INFO">${RegisterButton} = //button[@type='submit']</msg>
+<status status="PASS" starttime="20210422 12:33:28.192" endtime="20210422 12:33:28.192"/>
 </kw>
-<msg timestamp="20210420 12:20:48.323" level="INFO">${username_locator} = //input[@type='email']</msg>
-<msg timestamp="20210420 12:20:48.323" level="INFO">${password_locator} = //input[@type='password']</msg>
-<msg timestamp="20210420 12:20:48.323" level="INFO">${recieveMailBox} = //input[@type='checkbox']</msg>
-<msg timestamp="20210420 12:20:48.323" level="INFO">${RegisterButton} = //button[@type='submit']</msg>
-<status status="PASS" starttime="20210420 12:20:48.317" endtime="20210420 12:20:48.323"/>
+<msg timestamp="20210422 12:33:28.193" level="INFO">${username_locator} = //input[@type='email']</msg>
+<msg timestamp="20210422 12:33:28.193" level="INFO">${password_locator} = //input[@type='password']</msg>
+<msg timestamp="20210422 12:33:28.193" level="INFO">${recieveMailBox} = //input[@type='checkbox']</msg>
+<msg timestamp="20210422 12:33:28.193" level="INFO">${terms&amp;conditions} = (//input[@class='StyledCheckbox__StyledInput-sc-19upj2m-0 PuVIQ'])[2]</msg>
+<msg timestamp="20210422 12:33:28.193" level="INFO">${RegisterButton} = //button[@type='submit']</msg>
+<status status="PASS" starttime="20210422 12:33:28.187" endtime="20210422 12:33:28.193"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${username_locator}</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210420 12:20:48.324" level="INFO">Typing text 'mertyesin89@gmail.com' into text field '//input[@type='email']'.</msg>
-<status status="PASS" starttime="20210420 12:20:48.323" endtime="20210420 12:20:48.446"/>
+<msg timestamp="20210422 12:33:28.193" level="INFO">Typing text 'mertyesin89@gmail.com' into text field '//input[@type='email']'.</msg>
+<status status="PASS" starttime="20210422 12:33:28.193" endtime="20210422 12:33:28.298"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${password_locator}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210420 12:20:48.447" level="INFO">Typing text '14101969944' into text field '//input[@type='password']'.</msg>
-<status status="PASS" starttime="20210420 12:20:48.446" endtime="20210420 12:20:48.539"/>
+<msg timestamp="20210422 12:33:28.299" level="INFO">Typing text '14101969944' into text field '//input[@type='password']'.</msg>
+<status status="PASS" starttime="20210422 12:33:28.298" endtime="20210422 12:33:28.384"/>
+</kw>
+<kw name="Accept Terms &amp; Conditions" library="LoginPage">
+<arg>${terms&amp;conditions}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${terms&amp;conditions}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210422 12:33:28.385" level="INFO">Clicking element '(//input[@class='StyledCheckbox__StyledInput-sc-19upj2m-0 PuVIQ'])[2]'.</msg>
+<status status="PASS" starttime="20210422 12:33:28.384" endtime="20210422 12:33:28.432"/>
+</kw>
+<status status="PASS" starttime="20210422 12:33:28.384" endtime="20210422 12:33:28.432"/>
 </kw>
 <kw name="Accept mail registration" library="LoginPage">
 <arg>${recieveMailBox}</arg>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${recieveMailBox}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210420 12:20:48.540" level="INFO">Clicking element '//input[@type='checkbox']'.</msg>
-<status status="PASS" starttime="20210420 12:20:48.540" endtime="20210420 12:20:48.752"/>
+<msg timestamp="20210422 12:33:28.433" level="INFO">Clicking element '//input[@type='checkbox']'.</msg>
+<status status="PASS" starttime="20210422 12:33:28.433" endtime="20210422 12:33:28.471"/>
 </kw>
-<status status="PASS" starttime="20210420 12:20:48.540" endtime="20210420 12:20:48.753"/>
+<status status="PASS" starttime="20210422 12:33:28.432" endtime="20210422 12:33:28.471"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${RegisterButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210420 12:20:48.755" level="INFO">Clicking element '//button[@type='submit']'.</msg>
-<status status="PASS" starttime="20210420 12:20:48.755" endtime="20210420 12:20:48.833"/>
+<msg timestamp="20210422 12:33:28.472" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20210422 12:33:28.471" endtime="20210422 12:33:28.602"/>
 </kw>
-<status status="PASS" starttime="20210420 12:20:48.316" endtime="20210420 12:20:48.834"/>
+<status status="PASS" starttime="20210422 12:33:28.187" endtime="20210422 12:33:28.602"/>
 </kw>
-<status status="PASS" starttime="20210420 12:20:48.253" endtime="20210420 12:20:48.834"/>
+<status status="PASS" starttime="20210422 12:33:28.182" endtime="20210422 12:33:28.602"/>
 </kw>
-<status status="PASS" starttime="20210420 12:20:39.754" endtime="20210420 12:20:48.834"/>
+<status status="PASS" starttime="20210422 12:33:25.023" endtime="20210422 12:33:28.603"/>
 </kw>
 <kw name="Add first listed product in Mobel Section to the Wishlist" library="PageObjects">
 <kw name="Go to Mobel Menu from Home Page" library="HomePage">
@@ -282,6 +377,7 @@
 <kw name="Get xpaths from the JSON file for Home Page" library="CommonKeywords">
 <var>${mobel_xpath}</var>
 <var>${SearchBox}</var>
+<var>${myAccount}</var>
 <doc>Return Home Page locators</doc>
 <kw name="Read object repository locators" library="CommonKeywords">
 <var>${object}</var>
@@ -290,8 +386,8 @@
 <var>${json}</var>
 <arg>../library/ObjectRepository.json</arg>
 <doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20210420 12:20:48.835" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json"&gt;C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json&lt;/a&gt;'.</msg>
-<msg timestamp="20210420 12:20:48.836" level="INFO">${json} = {
+<msg timestamp="20210422 12:33:28.606" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json"&gt;C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json&lt;/a&gt;'.</msg>
+<msg timestamp="20210422 12:33:28.606" level="INFO">${json} = {
    "MainPage":[
       {
          "MenuTab":[
@@ -300,65 +396,73 @@
                "Collection":"",
                "Looks":"",
                "Mobel":"//*[@id=\"wwOneHeader\"]/div/di...</msg>
-<status status="PASS" starttime="20210420 12:20:48.835" endtime="20210420 12:20:48.836"/>
+<status status="PASS" starttime="20210422 12:33:28.605" endtime="20210422 12:33:28.606"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${object}</var>
 <arg>json.loads(r'''${json}''')</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20210420 12:20:48.836" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
-<status status="PASS" starttime="20210420 12:20:48.836" endtime="20210420 12:20:48.836"/>
+<msg timestamp="20210422 12:33:28.607" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
+<status status="PASS" starttime="20210422 12:33:28.606" endtime="20210422 12:33:28.607"/>
 </kw>
-<msg timestamp="20210420 12:20:48.836" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
-<status status="PASS" starttime="20210420 12:20:48.835" endtime="20210420 12:20:48.836"/>
+<msg timestamp="20210422 12:33:28.607" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
+<status status="PASS" starttime="20210422 12:33:28.605" endtime="20210422 12:33:28.607"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${mobel_xpath}</var>
 <arg>${object["MainPage"][0]["MenuTab"][0]["Mobel"]}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20210420 12:20:48.837" level="INFO">${mobel_xpath} = //*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]</msg>
-<status status="PASS" starttime="20210420 12:20:48.836" endtime="20210420 12:20:48.837"/>
+<msg timestamp="20210422 12:33:28.608" level="INFO">${mobel_xpath} = //*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]</msg>
+<status status="PASS" starttime="20210422 12:33:28.607" endtime="20210422 12:33:28.608"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${SearchBox}</var>
 <arg>${object["MainPage"][0]["MenuTab"][1]["searchBox"]}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20210420 12:20:48.837" level="INFO">${SearchBox} = //*[@id="wwOneHeader"]/div/div[1]/header/div[6]/div[1]/form/input</msg>
-<status status="PASS" starttime="20210420 12:20:48.837" endtime="20210420 12:20:48.838"/>
+<msg timestamp="20210422 12:33:28.608" level="INFO">${SearchBox} = //*[@id="wwOneHeader"]/div/div[1]/header/div[6]/div[1]/form/input</msg>
+<status status="PASS" starttime="20210422 12:33:28.608" endtime="20210422 12:33:28.608"/>
 </kw>
-<msg timestamp="20210420 12:20:48.838" level="INFO">${mobel_xpath} = //*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]</msg>
-<msg timestamp="20210420 12:20:48.838" level="INFO">${SearchBox} = //*[@id="wwOneHeader"]/div/div[1]/header/div[6]/div[1]/form/input</msg>
-<status status="PASS" starttime="20210420 12:20:48.835" endtime="20210420 12:20:48.838"/>
+<kw name="Set Variable" library="BuiltIn">
+<var>${myAccount}</var>
+<arg>${object["myAccount"]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210422 12:33:28.609" level="INFO">${myAccount} = //*[@id="wwOneHeader"]/div/div[1]/header/div[8]/div[1]/div/span[2]</msg>
+<status status="PASS" starttime="20210422 12:33:28.608" endtime="20210422 12:33:28.609"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210420 12:20:51.846" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20210420 12:20:48.838" endtime="20210420 12:20:51.846"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${mobel_xpath}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210420 12:20:51.846" level="INFO">Clicking element '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]'.</msg>
-<status status="PASS" starttime="20210420 12:20:51.846" endtime="20210420 12:20:51.932"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${SearchBox}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210420 12:20:51.933" level="INFO">Clicking element '//*[@id="wwOneHeader"]/div/div[1]/header/div[6]/div[1]/form/input'.</msg>
-<status status="PASS" starttime="20210420 12:20:51.932" endtime="20210420 12:20:52.012"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20210420 12:20:52.012" endtime="20210420 12:20:52.146"/>
-</kw>
-<status status="PASS" starttime="20210420 12:20:48.834" endtime="20210420 12:20:52.146"/>
+<msg timestamp="20210422 12:33:28.610" level="INFO">${mobel_xpath} = //*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]</msg>
+<msg timestamp="20210422 12:33:28.610" level="INFO">${SearchBox} = //*[@id="wwOneHeader"]/div/div[1]/header/div[6]/div[1]/form/input</msg>
+<msg timestamp="20210422 12:33:28.610" level="INFO">${myAccount} = //*[@id="wwOneHeader"]/div/div[1]/header/div[8]/div[1]/div/span[2]</msg>
+<status status="PASS" starttime="20210422 12:33:28.604" endtime="20210422 12:33:28.610"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210420 12:20:57.162" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20210420 12:20:52.146" endtime="20210420 12:20:57.162"/>
+<msg timestamp="20210422 12:33:33.612" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210422 12:33:28.610" endtime="20210422 12:33:33.612"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${mobel_xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210422 12:33:33.614" level="INFO">Clicking element '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]'.</msg>
+<status status="PASS" starttime="20210422 12:33:33.614" endtime="20210422 12:33:34.914"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SearchBox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210422 12:33:34.914" level="INFO">Clicking element '//*[@id="wwOneHeader"]/div/div[1]/header/div[6]/div[1]/form/input'.</msg>
+<status status="PASS" starttime="20210422 12:33:34.914" endtime="20210422 12:33:35.204"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210422 12:33:35.204" endtime="20210422 12:33:35.433"/>
+</kw>
+<status status="PASS" starttime="20210422 12:33:28.604" endtime="20210422 12:33:35.433"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210422 12:33:40.433" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210422 12:33:35.433" endtime="20210422 12:33:40.433"/>
 </kw>
 <kw name="Add item to wishlist" library="MobelPage">
 <kw name="Get xpaths from the JSON file for Mobel Page" library="CommonKeywords">
@@ -371,8 +475,8 @@
 <var>${json}</var>
 <arg>../library/ObjectRepository.json</arg>
 <doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20210420 12:20:57.162" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json"&gt;C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json&lt;/a&gt;'.</msg>
-<msg timestamp="20210420 12:20:57.162" level="INFO">${json} = {
+<msg timestamp="20210422 12:33:40.433" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json"&gt;C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json&lt;/a&gt;'.</msg>
+<msg timestamp="20210422 12:33:40.433" level="INFO">${json} = {
    "MainPage":[
       {
          "MenuTab":[
@@ -381,37 +485,37 @@
                "Collection":"",
                "Looks":"",
                "Mobel":"//*[@id=\"wwOneHeader\"]/div/di...</msg>
-<status status="PASS" starttime="20210420 12:20:57.162" endtime="20210420 12:20:57.162"/>
+<status status="PASS" starttime="20210422 12:33:40.433" endtime="20210422 12:33:40.433"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${object}</var>
 <arg>json.loads(r'''${json}''')</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20210420 12:20:57.162" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
-<status status="PASS" starttime="20210420 12:20:57.162" endtime="20210420 12:20:57.162"/>
+<msg timestamp="20210422 12:33:40.433" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
+<status status="PASS" starttime="20210422 12:33:40.433" endtime="20210422 12:33:40.433"/>
 </kw>
-<msg timestamp="20210420 12:20:57.162" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
-<status status="PASS" starttime="20210420 12:20:57.162" endtime="20210420 12:20:57.162"/>
+<msg timestamp="20210422 12:33:40.433" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
+<status status="PASS" starttime="20210422 12:33:40.433" endtime="20210422 12:33:40.433"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${ProductHeart}</var>
 <arg>${object["MainPage"][1]["MobelPage"][0]["firstProductHeart"]}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20210420 12:20:57.162" level="INFO">${ProductHeart} = //*[@id="app-root"]/div/div[1]/div[7]/div/div/main/div/div[2]/div[1]/a/div/div[2]/div[2]</msg>
-<status status="PASS" starttime="20210420 12:20:57.162" endtime="20210420 12:20:57.162"/>
+<msg timestamp="20210422 12:33:40.433" level="INFO">${ProductHeart} = //*[@id="app-root"]/div/div[1]/div[7]/div/div/main/div/div[2]/div[1]/a/div/div[2]/div[2]</msg>
+<status status="PASS" starttime="20210422 12:33:40.433" endtime="20210422 12:33:40.433"/>
 </kw>
-<msg timestamp="20210420 12:20:57.162" level="INFO">${firstProductHeart} = //*[@id="app-root"]/div/div[1]/div[7]/div/div/main/div/div[2]/div[1]/a/div/div[2]/div[2]</msg>
-<status status="PASS" starttime="20210420 12:20:57.162" endtime="20210420 12:20:57.162"/>
+<msg timestamp="20210422 12:33:40.433" level="INFO">${firstProductHeart} = //*[@id="app-root"]/div/div[1]/div[7]/div/div/main/div/div[2]/div[1]/a/div/div[2]/div[2]</msg>
+<status status="PASS" starttime="20210422 12:33:40.433" endtime="20210422 12:33:40.433"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${firstProductHeart}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210420 12:20:57.162" level="INFO">Clicking element '//*[@id="app-root"]/div/div[1]/div[7]/div/div/main/div/div[2]/div[1]/a/div/div[2]/div[2]'.</msg>
-<status status="PASS" starttime="20210420 12:20:57.162" endtime="20210420 12:20:57.251"/>
+<msg timestamp="20210422 12:33:40.433" level="INFO">Clicking element '//*[@id="app-root"]/div/div[1]/div[7]/div/div/main/div/div[2]/div[1]/a/div/div[2]/div[2]'.</msg>
+<status status="PASS" starttime="20210422 12:33:40.433" endtime="20210422 12:33:40.530"/>
 </kw>
-<status status="PASS" starttime="20210420 12:20:57.162" endtime="20210420 12:20:57.251"/>
+<status status="PASS" starttime="20210422 12:33:40.433" endtime="20210422 12:33:40.530"/>
 </kw>
-<status status="PASS" starttime="20210420 12:20:48.834" endtime="20210420 12:20:57.251"/>
+<status status="PASS" starttime="20210422 12:33:28.603" endtime="20210422 12:33:40.530"/>
 </kw>
 <kw name="Check wishlist product count is">
 <arg>1</arg>
@@ -420,8 +524,8 @@
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210420 12:21:02.261" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20210420 12:20:57.251" endtime="20210420 12:21:02.261"/>
+<msg timestamp="20210422 12:33:45.543" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210422 12:33:40.531" endtime="20210422 12:33:45.543"/>
 </kw>
 <kw name="Get xpaths from the JSON file for Wishlist Page" library="CommonKeywords">
 <var>${productCountPath}</var>
@@ -433,8 +537,8 @@
 <var>${json}</var>
 <arg>../library/ObjectRepository.json</arg>
 <doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20210420 12:21:02.261" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json"&gt;C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json&lt;/a&gt;'.</msg>
-<msg timestamp="20210420 12:21:02.261" level="INFO">${json} = {
+<msg timestamp="20210422 12:33:45.543" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json"&gt;C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json&lt;/a&gt;'.</msg>
+<msg timestamp="20210422 12:33:45.543" level="INFO">${json} = {
    "MainPage":[
       {
          "MenuTab":[
@@ -443,45 +547,45 @@
                "Collection":"",
                "Looks":"",
                "Mobel":"//*[@id=\"wwOneHeader\"]/div/di...</msg>
-<status status="PASS" starttime="20210420 12:21:02.261" endtime="20210420 12:21:02.261"/>
+<status status="PASS" starttime="20210422 12:33:45.543" endtime="20210422 12:33:45.543"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${object}</var>
 <arg>json.loads(r'''${json}''')</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20210420 12:21:02.261" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
-<status status="PASS" starttime="20210420 12:21:02.261" endtime="20210420 12:21:02.261"/>
+<msg timestamp="20210422 12:33:45.543" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
+<status status="PASS" starttime="20210422 12:33:45.543" endtime="20210422 12:33:45.543"/>
 </kw>
-<msg timestamp="20210420 12:21:02.261" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
-<status status="PASS" starttime="20210420 12:21:02.261" endtime="20210420 12:21:02.261"/>
+<msg timestamp="20210422 12:33:45.543" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
+<status status="PASS" starttime="20210422 12:33:45.543" endtime="20210422 12:33:45.543"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${WishlistCount}</var>
 <arg>${object["MainPage"][3]["WishlistCount"]}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20210420 12:21:02.261" level="INFO">${WishlistCount} = //*[@id="wwOneHeader"]/div/div[1]/header/div[8]/div[3]/div/span[1]/span</msg>
-<status status="PASS" starttime="20210420 12:21:02.261" endtime="20210420 12:21:02.261"/>
+<msg timestamp="20210422 12:33:45.543" level="INFO">${WishlistCount} = //*[@id="wwOneHeader"]/div/div[1]/header/div[8]/div[3]/div/span[1]/span</msg>
+<status status="PASS" starttime="20210422 12:33:45.543" endtime="20210422 12:33:45.543"/>
 </kw>
-<msg timestamp="20210420 12:21:02.271" level="INFO">${productCountPath} = //*[@id="wwOneHeader"]/div/div[1]/header/div[8]/div[3]/div/span[1]/span</msg>
-<status status="PASS" starttime="20210420 12:21:02.261" endtime="20210420 12:21:02.271"/>
+<msg timestamp="20210422 12:33:45.543" level="INFO">${productCountPath} = //*[@id="wwOneHeader"]/div/div[1]/header/div[8]/div[3]/div/span[1]/span</msg>
+<status status="PASS" starttime="20210422 12:33:45.543" endtime="20210422 12:33:45.543"/>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${productCount}</var>
 <arg>${productCountPath}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20210420 12:21:02.291" level="INFO">${productCount} = 1</msg>
-<status status="PASS" starttime="20210420 12:21:02.271" endtime="20210420 12:21:02.291"/>
+<msg timestamp="20210422 12:33:45.563" level="INFO">${productCount} = 1</msg>
+<status status="PASS" starttime="20210422 12:33:45.543" endtime="20210422 12:33:45.563"/>
 </kw>
-<msg timestamp="20210420 12:21:02.291" level="INFO">${actual_product_count} = 1</msg>
-<status status="PASS" starttime="20210420 12:20:57.251" endtime="20210420 12:21:02.291"/>
+<msg timestamp="20210422 12:33:45.563" level="INFO">${actual_product_count} = 1</msg>
+<status status="PASS" starttime="20210422 12:33:40.531" endtime="20210422 12:33:45.563"/>
 </kw>
-<status status="PASS" starttime="20210420 12:20:57.251" endtime="20210420 12:21:02.291"/>
+<status status="PASS" starttime="20210422 12:33:40.530" endtime="20210422 12:33:45.563"/>
 </kw>
 <kw name="Take Screenshot" library="Screenshot">
 <arg>1_item_in_wishlist_icon_and_in_the_list</arg>
 <doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
-<msg timestamp="20210420 12:21:02.361" level="INFO" html="true">&lt;a href="1_item_in_wishlist_icon_and_in_the_list_9.jpg"&gt;&lt;img src="1_item_in_wishlist_icon_and_in_the_list_9.jpg" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210420 12:21:02.291" endtime="20210420 12:21:02.361"/>
+<msg timestamp="20210422 12:33:45.643" level="INFO" html="true">&lt;a href="1_item_in_wishlist_icon_and_in_the_list_1.jpg"&gt;&lt;img src="1_item_in_wishlist_icon_and_in_the_list_1.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210422 12:33:45.563" endtime="20210422 12:33:45.643"/>
 </kw>
 <kw name="Remove the product from wishlist" library="PageObjects">
 <kw name="Go to Wishlist from Home Page" library="HomePage">
@@ -496,8 +600,8 @@
 <var>${json}</var>
 <arg>../library/ObjectRepository.json</arg>
 <doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20210420 12:21:02.361" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json"&gt;C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json&lt;/a&gt;'.</msg>
-<msg timestamp="20210420 12:21:02.361" level="INFO">${json} = {
+<msg timestamp="20210422 12:33:45.643" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json"&gt;C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json&lt;/a&gt;'.</msg>
+<msg timestamp="20210422 12:33:45.643" level="INFO">${json} = {
    "MainPage":[
       {
          "MenuTab":[
@@ -506,47 +610,47 @@
                "Collection":"",
                "Looks":"",
                "Mobel":"//*[@id=\"wwOneHeader\"]/div/di...</msg>
-<status status="PASS" starttime="20210420 12:21:02.361" endtime="20210420 12:21:02.361"/>
+<status status="PASS" starttime="20210422 12:33:45.643" endtime="20210422 12:33:45.643"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${object}</var>
 <arg>json.loads(r'''${json}''')</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20210420 12:21:02.361" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
-<status status="PASS" starttime="20210420 12:21:02.361" endtime="20210420 12:21:02.361"/>
+<msg timestamp="20210422 12:33:45.643" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
+<status status="PASS" starttime="20210422 12:33:45.643" endtime="20210422 12:33:45.643"/>
 </kw>
-<msg timestamp="20210420 12:21:02.371" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
-<status status="PASS" starttime="20210420 12:21:02.361" endtime="20210420 12:21:02.371"/>
+<msg timestamp="20210422 12:33:45.643" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
+<status status="PASS" starttime="20210422 12:33:45.643" endtime="20210422 12:33:45.643"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${WishlistIcon}</var>
 <arg>${object["MainPage"][3]["WishlistIcon"]}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20210420 12:21:02.371" level="INFO">${WishlistIcon} = //*[@id="wwOneHeader"]/div/div[1]/header/div[8]/div[3]/div/span[2]</msg>
-<status status="PASS" starttime="20210420 12:21:02.371" endtime="20210420 12:21:02.371"/>
+<msg timestamp="20210422 12:33:45.643" level="INFO">${WishlistIcon} = //*[@id="wwOneHeader"]/div/div[1]/header/div[8]/div[3]/div/span[2]</msg>
+<status status="PASS" starttime="20210422 12:33:45.643" endtime="20210422 12:33:45.643"/>
 </kw>
-<msg timestamp="20210420 12:21:02.371" level="INFO">${wishlist_icon} = //*[@id="wwOneHeader"]/div/div[1]/header/div[8]/div[3]/div/span[2]</msg>
-<status status="PASS" starttime="20210420 12:21:02.361" endtime="20210420 12:21:02.371"/>
+<msg timestamp="20210422 12:33:45.643" level="INFO">${wishlist_icon} = //*[@id="wwOneHeader"]/div/div[1]/header/div[8]/div[3]/div/span[2]</msg>
+<status status="PASS" starttime="20210422 12:33:45.643" endtime="20210422 12:33:45.643"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${wishlist_icon}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210420 12:21:02.371" endtime="20210420 12:21:02.381"/>
+<status status="PASS" starttime="20210422 12:33:45.643" endtime="20210422 12:33:45.663"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${wishlist_icon}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210420 12:21:02.391" level="INFO">Clicking element '//*[@id="wwOneHeader"]/div/div[1]/header/div[8]/div[3]/div/span[2]'.</msg>
-<status status="PASS" starttime="20210420 12:21:02.391" endtime="20210420 12:21:03.676"/>
+<msg timestamp="20210422 12:33:45.663" level="INFO">Clicking element '//*[@id="wwOneHeader"]/div/div[1]/header/div[8]/div[3]/div/span[2]'.</msg>
+<status status="PASS" starttime="20210422 12:33:45.663" endtime="20210422 12:33:46.181"/>
 </kw>
-<status status="PASS" starttime="20210420 12:21:02.361" endtime="20210420 12:21:03.676"/>
+<status status="PASS" starttime="20210422 12:33:45.643" endtime="20210422 12:33:46.181"/>
 </kw>
 <kw name="Remove first item listed in Wishlist Page" library="WishlistPage">
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210420 12:21:08.681" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20210420 12:21:03.677" endtime="20210420 12:21:08.681"/>
+<msg timestamp="20210422 12:33:51.193" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210422 12:33:46.181" endtime="20210422 12:33:51.193"/>
 </kw>
 <kw name="Get xpaths from the JSON file for Wishlist Product" library="CommonKeywords">
 <var>${RemoveProduct}</var>
@@ -558,8 +662,8 @@
 <var>${json}</var>
 <arg>../library/ObjectRepository.json</arg>
 <doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20210420 12:21:08.681" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json"&gt;C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json&lt;/a&gt;'.</msg>
-<msg timestamp="20210420 12:21:08.686" level="INFO">${json} = {
+<msg timestamp="20210422 12:33:51.194" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json"&gt;C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json&lt;/a&gt;'.</msg>
+<msg timestamp="20210422 12:33:51.194" level="INFO">${json} = {
    "MainPage":[
       {
          "MenuTab":[
@@ -568,63 +672,108 @@
                "Collection":"",
                "Looks":"",
                "Mobel":"//*[@id=\"wwOneHeader\"]/div/di...</msg>
-<status status="PASS" starttime="20210420 12:21:08.681" endtime="20210420 12:21:08.686"/>
+<status status="PASS" starttime="20210422 12:33:51.193" endtime="20210422 12:33:51.194"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${object}</var>
 <arg>json.loads(r'''${json}''')</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20210420 12:21:08.686" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
-<status status="PASS" starttime="20210420 12:21:08.686" endtime="20210420 12:21:08.686"/>
+<msg timestamp="20210422 12:33:51.194" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
+<status status="PASS" starttime="20210422 12:33:51.194" endtime="20210422 12:33:51.194"/>
 </kw>
-<msg timestamp="20210420 12:21:08.686" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
-<status status="PASS" starttime="20210420 12:21:08.681" endtime="20210420 12:21:08.686"/>
+<msg timestamp="20210422 12:33:51.195" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
+<status status="PASS" starttime="20210422 12:33:51.193" endtime="20210422 12:33:51.195"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${RemoveProduct}</var>
 <arg>${object["WishlistPage"][0]["Product"][0]["RemoveProduct"]}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20210420 12:21:08.686" level="INFO">${RemoveProduct} = //*[@id="wishlistRoot"]/div/div[4]/div/ul/li/button</msg>
-<status status="PASS" starttime="20210420 12:21:08.686" endtime="20210420 12:21:08.686"/>
+<msg timestamp="20210422 12:33:51.195" level="INFO">${RemoveProduct} = //*[@id="wishlistRoot"]/div/div[4]/div/ul/li/button</msg>
+<status status="PASS" starttime="20210422 12:33:51.195" endtime="20210422 12:33:51.195"/>
 </kw>
-<msg timestamp="20210420 12:21:08.686" level="INFO">${RemoveProduct} = //*[@id="wishlistRoot"]/div/div[4]/div/ul/li/button</msg>
-<status status="PASS" starttime="20210420 12:21:08.681" endtime="20210420 12:21:08.686"/>
+<msg timestamp="20210422 12:33:51.195" level="INFO">${RemoveProduct} = //*[@id="wishlistRoot"]/div/div[4]/div/ul/li/button</msg>
+<status status="PASS" starttime="20210422 12:33:51.193" endtime="20210422 12:33:51.195"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${RemoveProduct}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210420 12:21:08.686" level="INFO">Clicking element '//*[@id="wishlistRoot"]/div/div[4]/div/ul/li/button'.</msg>
-<status status="PASS" starttime="20210420 12:21:08.686" endtime="20210420 12:21:08.734"/>
+<msg timestamp="20210422 12:33:51.196" level="INFO">Clicking element '//*[@id="wishlistRoot"]/div/div[4]/div/ul/li/button'.</msg>
+<status status="PASS" starttime="20210422 12:33:51.195" endtime="20210422 12:33:51.234"/>
 </kw>
-<status status="PASS" starttime="20210420 12:21:03.677" endtime="20210420 12:21:08.735"/>
+<status status="PASS" starttime="20210422 12:33:46.181" endtime="20210422 12:33:51.234"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210420 12:21:13.740" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20210420 12:21:08.735" endtime="20210420 12:21:13.740"/>
+<msg timestamp="20210422 12:33:56.237" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210422 12:33:51.234" endtime="20210422 12:33:56.237"/>
 </kw>
-<status status="PASS" starttime="20210420 12:21:02.361" endtime="20210420 12:21:13.740"/>
+<status status="PASS" starttime="20210422 12:33:45.643" endtime="20210422 12:33:56.237"/>
+</kw>
+<kw name="Wishlist counter does not exists" library="WishlistPage">
+<kw name="Get xpaths from the JSON file for Wishlist Page" library="CommonKeywords">
+<var>${counter_locator}</var>
+<doc>Return counter for wishlist's locator</doc>
+<kw name="Read object repository locators" library="CommonKeywords">
+<var>${object}</var>
+<doc>For all elements on website, this keyword is returns an xpath collection for other keywords</doc>
+<kw name="Get File" library="OperatingSystem">
+<var>${json}</var>
+<arg>../library/ObjectRepository.json</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20210422 12:33:56.240" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json"&gt;C:\Users\mert.yesin\PycharmProjects\westwing\library\ObjectRepository.json&lt;/a&gt;'.</msg>
+<msg timestamp="20210422 12:33:56.240" level="INFO">${json} = {
+   "MainPage":[
+      {
+         "MenuTab":[
+            {
+               "Neu":"",
+               "Collection":"",
+               "Looks":"",
+               "Mobel":"//*[@id=\"wwOneHeader\"]/div/di...</msg>
+<status status="PASS" starttime="20210422 12:33:56.239" endtime="20210422 12:33:56.240"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${object}</var>
+<arg>json.loads(r'''${json}''')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20210422 12:33:56.241" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
+<status status="PASS" starttime="20210422 12:33:56.240" endtime="20210422 12:33:56.241"/>
+</kw>
+<msg timestamp="20210422 12:33:56.241" level="INFO">${object} = {'MainPage': [{'MenuTab': [{'Neu': '', 'Collection': '', 'Looks': '', 'Mobel': '//*[@id="wwOneHeader"]/div/div[2]/nav/ul/li[4]/a/span[2]', 'Deko': '', 'Leuchten': '', 'Textilien': '', 'Tisch &amp; Bar': '...</msg>
+<status status="PASS" starttime="20210422 12:33:56.239" endtime="20210422 12:33:56.241"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${WishlistCount}</var>
+<arg>${object["MainPage"][3]["WishlistCount"]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210422 12:33:56.242" level="INFO">${WishlistCount} = //*[@id="wwOneHeader"]/div/div[1]/header/div[8]/div[3]/div/span[1]/span</msg>
+<status status="PASS" starttime="20210422 12:33:56.241" endtime="20210422 12:33:56.242"/>
+</kw>
+<msg timestamp="20210422 12:33:56.242" level="INFO">${counter_locator} = //*[@id="wwOneHeader"]/div/div[1]/header/div[8]/div[3]/div/span[1]/span</msg>
+<status status="PASS" starttime="20210422 12:33:56.238" endtime="20210422 12:33:56.242"/>
+</kw>
+<status status="PASS" starttime="20210422 12:33:56.238" endtime="20210422 12:33:56.242"/>
 </kw>
 <kw name="Take Screenshot" library="Screenshot">
 <arg>no_item_in_wishlist_icon_and_in_the_list</arg>
 <doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
-<msg timestamp="20210420 12:21:13.795" level="INFO" html="true">&lt;a href="no_item_in_wishlist_icon_and_in_the_list_5.jpg"&gt;&lt;img src="no_item_in_wishlist_icon_and_in_the_list_5.jpg" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210420 12:21:13.740" endtime="20210420 12:21:13.795"/>
+<msg timestamp="20210422 12:33:56.284" level="INFO" html="true">&lt;a href="no_item_in_wishlist_icon_and_in_the_list_1.jpg"&gt;&lt;img src="no_item_in_wishlist_icon_and_in_the_list_1.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210422 12:33:56.242" endtime="20210422 12:33:56.284"/>
 </kw>
 <kw name="Finish Test Case" library="CommonKeywords" type="TEARDOWN">
 <doc>Teardown for all test cases</doc>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210420 12:21:13.795" endtime="20210420 12:21:15.950"/>
+<status status="PASS" starttime="20210422 12:33:56.286" endtime="20210422 12:33:58.573"/>
 </kw>
-<status status="PASS" starttime="20210420 12:21:13.795" endtime="20210420 12:21:15.950"/>
+<status status="PASS" starttime="20210422 12:33:56.285" endtime="20210422 12:33:58.573"/>
 </kw>
 <doc>This test case checks that the items which are added to wishlist and removed from wishlist</doc>
-<status status="PASS" starttime="20210420 12:20:39.754" endtime="20210420 12:21:15.950"/>
+<status status="PASS" starttime="20210422 12:33:16.246" endtime="20210422 12:33:58.573"/>
 </test>
 <doc>Westwing website wishlist test</doc>
-<status status="PASS" starttime="20210420 12:20:39.423" endtime="20210420 12:21:15.950"/>
+<status status="PASS" starttime="20210422 12:33:15.932" endtime="20210422 12:33:58.573"/>
 </suite>
 <statistics>
 <total>

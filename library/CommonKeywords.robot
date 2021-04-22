@@ -12,12 +12,10 @@ Resource  ../PageObjects/LoginPage.robot
 Start Test Case
     [Documentation]  Get requested url, a browser and login to website
     ${url}  ${browser_type}  Get url and browser type
-    ${email}  ${password}  Get user credentials
 
     # Create and open browser accroding to url & browser type
     Open Browser  ${url}  ${browser_type}
     sleep  5  # wait until login window appears
-    Login  ${email}  ${password}
 
 ###################### Test Teardown ######################
 Finish Test Case
@@ -76,8 +74,9 @@ Get xpaths from the JSON file for Home Page
     # assign recieved xpath to a variable
     ${mobel_xpath}=  Set Variable  ${object["MainPage"][0]["MenuTab"][0]["Mobel"]}
     ${SearchBox}=  Set Variable  ${object["MainPage"][0]["MenuTab"][1]["searchBox"]}
+    ${myAccount}=  Set Variable  ${object["myAccount"]}
 
-    [return]  ${mobel_xpath}  ${SearchBox}
+    [return]  ${mobel_xpath}  ${SearchBox}  ${myAccount}
 
 Get xpaths from the JSON file for Wishlist Icon
     [Documentation]  Return wsihlist heart locators
@@ -119,9 +118,10 @@ Get xpaths of login window from the JSON file for Home Page
     ${username}=  Set Variable  ${object["MainPage"][2]["LoginPage"][0]["username"]}
     ${password}=  Set Variable  ${object["MainPage"][2]["LoginPage"][0]["password"]}
     ${recieveMailBox}=  Set Variable  ${object["MainPage"][2]["LoginPage"][0]["recieveMailBox"]}
+    ${terms&conditions}=  Set Variable  ${object["MainPage"][2]["LoginPage"][0]["terms&conditions"]}
     ${RegisterButton}=  Set Variable  ${object["MainPage"][2]["LoginPage"][0]["RegisterButton"]}
 
-    [return]  ${username}  ${password}  ${recieveMailBox}  ${RegisterButton}
+    [return]  ${username}  ${password}  ${recieveMailBox}  ${terms&conditions}  ${RegisterButton}
 
 #!! NOT BELONG ANY PAGE, BECAUSE OF IT, THIS BUTTON CANNOT BE CATEGORIZED
 Get cookie button

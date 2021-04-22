@@ -15,6 +15,7 @@ Test Teardown  CommonKeywords.Finish Test Case
 Add and remove an item to wishlist
     [Documentation]  This test case checks that the items which are added to wishlist and removed from wishlist
 
+    Login to website
     Add first listed product in Mobel Section to the Wishlist
     Check wishlist product count is  1
     Take screenshot  1_item_in_wishlist_icon_and_in_the_list
